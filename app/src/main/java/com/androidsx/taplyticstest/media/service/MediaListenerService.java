@@ -26,4 +26,8 @@ public class MediaListenerService extends Service {
         super.onDestroy();
         mediaManager.onDestroy();
     }
+
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        return START_STICKY;
+    }
 }
